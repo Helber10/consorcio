@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gerenciar Membros</title>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#2563eb" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("sw.js")
+        .then(() => console.log("PWA ativo"))
+        .catch((err) => console.error("Erro PWA", err));
+    }
+  </script>
+
+  <body>
+    <div class="container">
+      <h1>Gerenciar Membros</h1>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Senha</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="listaMembros"></tbody>
+      </table>
+
+      <p id="msg"></p>
+
+      <a href="dashboard.html">⬅ Voltar</a>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/membros.js"></script>
+  </body>
+</html>
