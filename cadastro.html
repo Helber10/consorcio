@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cadastro de Membros</title>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#2563eb" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("sw.js")
+        .then(() => console.log("PWA ativo"))
+        .catch((err) => console.error("Erro PWA", err));
+    }
+  </script>
+
+  <body>
+    <div class="container">
+      <h1>Cadastro de Membros</h1>
+
+      <input type="text" id="nome" placeholder="Nome do membro" />
+      <input type="password" id="senha" placeholder="Senha" />
+
+      <button onclick="cadastrarMembro()">Cadastrar</button>
+
+      <p id="msg"></p>
+
+      <a href="dashboard.html">⬅ Voltar</a>
+    </div>
+
+    <!-- ORDEM CORRETA -->
+    <script src="js/app.js"></script>
+    <script src="js/cadastro.js"></script>
+  </body>
+</html>
